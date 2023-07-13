@@ -1,0 +1,35 @@
+* {
+	margin: 0;
+	padding: 5px;
+	box-sizing: border-box;
+}
+h1 {
+	text-align: center;
+}
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 20px;
+	margin-bottom: 15px;
+}
+
+.card h2 {
+	margin-bottom: 5px;
+}
+
+.card p {
+	margin-bottom: 10px;
+}
+
+.card img {
+	display: inline-block;
+	max-width: 100%;
+}
+#root{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
