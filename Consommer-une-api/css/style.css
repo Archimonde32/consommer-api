@@ -67,3 +67,17 @@ h1 {
 	right: 10px;
 	cursor: pointer;
 }
+@media (min-width: 768px) {
+	.card {
+		padding: 10px;
+		margin: 10px;
+		max-width: calc(33.33% - 20px);
+	}
+}
+
+/* Media queries pour les écrans de grande taille */
+@media (min-width: 1024px) {
+	.card {
+		max-width: calc(25% - 20px);
+	}
+}
