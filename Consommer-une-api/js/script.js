@@ -1,35 +1,25 @@
-// window.onload = function() {
-// let functionGET =async function (url){
-//     const requestGET = new Request(url, {
-//         method: 'GET',
-//         headers: {
-//             'Content-Type': 'application/json'
-//         },
-//     });
-// const res = await fetch(requestGET);
-// console.log(res);
-// let liste = [];
-// if(!res){
-//     console.log('error');
-// }else{
-//     if(res.ok){
-//         let value = await res.json();
-//         console.log(value);
-//         liste =value.data;
-//         console.log(liste);
-//     }
-// }
-// return liste;
-// }
+window.onload = function() {
+    
+    
+    
+    let nb = 12;
 
-// }
+fetch('https://reqres.in/api/users?per_page=' + nb,{ method: 'GET' })
+    .then(response => {
+        const headers = new Headers();
 
+        var requestOptions = {
+            method: "GET",
+            headers: headers,
+            redirect: "follow"
+        };
+        
+        console.log('Données Hearders ',headers);
 
+        // Continuer à traiter la réponse
+        return response.json();
 
-let nb = 12;
-
-fetch('https://reqres.in/api/users?per_page=' + nb)
-    .then(response => response.json())
+    })
     .then(data => {
         const users = data.data;
 
@@ -92,3 +82,8 @@ function createModal(user) {
     document.body.appendChild(modal);
     return modal;
 }
+
+}
+
+
+
